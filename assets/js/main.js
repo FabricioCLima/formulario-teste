@@ -9,6 +9,7 @@ let dados = document.getElementsByClassName('pessoa');
 
 let res = document.getElementById('resultado');
 
+let formulario = document.querySelector('#formulario');
 
 btnEnviar.addEventListener('click', (e) => {
     e.preventDefault();
@@ -42,10 +43,12 @@ btnEnviar.addEventListener('click', (e) => {
 function fecharJanela(){
     res.style.display = 'none'
 
-    cxNome.value = ''
-    cxIdade.value = ''
-    cxPeso.value = ''
-    cxAltura.value = ''
+    formulario.reset()
+
+    // cxNome.value = ''
+    // cxIdade.value = ''
+    // cxPeso.value = ''
+    // cxAltura.value = ''
 }
 
 
