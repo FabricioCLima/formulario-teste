@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="decription" content="Exemplo de descrição para o meu site.">
+    <meta name="keywords" content="palavra-chaves,separadas,por,virgula">
+    <meta name="author" content="Fabricio Cavalcante">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <meta http-equiv="refresh" content="30"> -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <![endif]-->
+    <title>Teste Formulário IMC </title>
+</head>
+<body>
+
+        <main class="container">
+    
+            <header id="cabecalho">
+                <h1>Formulário IMC <i class="fa-solid fa-calculator"></i></h1>
+            </header><!-- cabeçalho -->
+
+            <section class="box">
+                <form action="" id="formulario" method="POST">
+
+                    <div class="form-group">
+                        <label for="nome">Nome</label>
+                        <input
+                            type="text"
+                            name="nome"
+                            id="nome"
+                            class="input"
+                            autofocus
+                            required
+                        >
+                    </div><!-- FORM-GROUP -->       
+                    <div class="form-group">
+                        <label for="idade">Idade</label>
+                        <input
+                            type="number"
+                            id="idade"
+                            class="input"
+                            name="idade"
+                            min="0"
+                            max="130"
+                            required
+                        >
+                    </div><!-- FORM-GROUP -->
+                    <div class="form-group">
+                        <label for="peso">Peso</label>
+                        <input
+                            type="number"
+                            id="peso"
+                            name="peso"
+                            class="input"
+                            step="0.01"
+                            min="0.0"
+                            max="500.0"
+                            required
+                        >
+                        <!-- ? A FUNÇÃO STEP SERVE PARA QUANDO FORMOS CLICAR NO PESO PELA SETINHA ELE IRA FAZER UM POR UM -->
+                    </div><!-- FORM-GROUP -->
+                    <div class="form-group">
+                        <label for="altura">Altura</label>
+                        <input
+                            type="number"
+                            id="altura"
+                            name="altura"
+                            class="input"
+                            min="0.0"
+                            max="2,80"
+                            required
+                        >
+                    </div><!-- FORM-GROUP -->
+                    <!-- todo BOTÕES -->
+                    <div class="btn">
+                        <button
+                            type="submit"
+                            class="botao"
+                            id="btnEnviar">
+                            Enviar
+                        </button>
+                        <button
+                            onclick="resetar()"
+                            type="reset"
+                            class="botao"
+                            id="btnLimpar">
+                            Limpar
+                        </button>
+                    </div><!-- FORM-GROUP -->
+
+                </form><!-- formulário -->
+            </section><!-- box -->
+
+            <section id="resultado">
+                <div onclick="fecharJanela()" class="fechar">
+                    X
+                </div>
+                <h1 id="texto" class="pessoa">IMC</h1>
+                <p id="nome" class="pessoa"></p>
+                <p id="idade" class="pessoa"></p>
+                <p id="peso" class="pessoa"></p>
+                <p id="altura" class="pessoa"></p>
+                <p id="imc" class="pessoa"></p>
+            </section><!-- resultado -->
+
+        </main><!-- container -->
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
